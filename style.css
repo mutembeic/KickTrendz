@@ -1,10 +1,6 @@
-/* Remove default margins and paddings */
-body, html {
-    margin: 0;
-    padding: 0;
+:root {
+    --maincolor: rgb(255, 255, 255); 
 }
-
-
 
 .marquee-container {
     width: 100%;
@@ -24,12 +20,12 @@ marquee h1 {
 }
 
 @keyframes colorChange {
-    0% { color: #ff5733; }   /* Red */
-    20% { color: #ffc300; }  /* Yellow */
-    40% { color: #28a745; }  /* Green */
-    60% { color: #007bff; }  /* Blue */
-    80% { color: #6f42c1; }  /* Purple */
-    100% { color: #ff5733; } /* Red */
+    0% { color: #ff5733; }    
+    20% { color: #ffc300; }   
+    40% { color: #28a745; }   
+    60% { color: #007bff; }   
+    80% { color: #6f42c1; }   
+    100% { color: #ff5733; }  
 }
 
 /* navbar css */
@@ -41,14 +37,15 @@ marquee h1 {
     position: relative;
 }
 .navbar-brand {
-    color: #ffc300 !important; /* Yellow color for the brand */
+    color: #ffc300 !important;  
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 .navbar-nav .nav-link {
-    color: #ffffff !important;
+    /* color: #ffffff !important; */
+    color: var(--maincolor);
     font-size: 1.1rem;
     font-weight: bold;
     margin: 0 15px;
@@ -69,7 +66,7 @@ marquee h1 {
     transform: scaleX(1);
 }
 .dropdown-menu {
-    background-color: #2c2c2c; /* Dark Gray */
+    background-color: #2c2c2c; 
     border: none;
     border-radius: 0;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -109,3 +106,37 @@ marquee h1 {
     padding: 3px 6px;
     border-radius: 50%;
 }
+
+.home {
+    background-image: url('https://img.lovepik.com/background/20211022/large/lovepik-extreme-black-background-image_401903249.jpg');
+    max-height: 100px;
+    color: r;
+}
+
+
+ 
+
+/* Adjust the height of carousel */
+.carousel-item img {
+    height: 700px;  
+    object-fit: cover;  
+  }
+  
+  /* Customize carousel controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; 
+    background-color: rgba(0, 0, 0, 0.5);  
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);  
+  }
+  
+  /* Optional: Add hover effect */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);  
+  }
+  
