@@ -104,3 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCart();
     updateCartCount();
 });
+
+
+document.getElementById('contact-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action (which is jumping to the top of the page)
+
+    // Scroll to the footer smoothly
+    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+});
