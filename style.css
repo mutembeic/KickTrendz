@@ -1,7 +1,11 @@
 :root {
     --maincolor: rgb(255, 255, 255); 
 }
-/* navbar css */
+
+body {
+    padding-top: 70px;  
+  }
+  
 
  /* Custom Navbar Styling */
  .navbar {
@@ -395,3 +399,34 @@ footer a i:hover {
     color: white;
     cursor: pointer;
 }
+
+
+.modern-heading {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 5vw; /* Responsive font size */
+    font-weight: 700; /* Bold heading */
+    color: #333; /* Dark modern color */
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient text */
+    text-align: center; /* Center-align the heading */
+    margin-top: 40px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none; /* Hide all slides initially */
+}
+
+.slide.active {
+    display: block; /* Only the active slide is shown */
+}
+
