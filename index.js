@@ -83,8 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Your cart is empty!");
     }
   });
-
-  // Handle Login/Sign Up button click
+// Handle Buy button click in the product list
+document.querySelectorAll(".buy-button").forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the default anchor behavior
+    alert("Item was successfully purchased!");
+  });
+});
+  // // Handle Login/Sign Up button click
   const loginButton = document.querySelector(".btn-outline-light");
   loginButton.textContent = isLoggedIn ? "Log Out" : "Login/Sign Up";
 
@@ -128,4 +134,19 @@ document
   });
 
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const subscribeButton = document.getElementById("subscribe-button");
+
+  subscribeButton.addEventListener("click", (e) => {
+      e.preventDefault();  
+      const emailInput = document.getElementById("newsletter-email");
+      const email = emailInput.value.trim();  
+
+      if (email) {
+          alert("Successfully subscribed!");  
+          emailInput.value = "";  
+      } else {
+          alert("Please enter a valid email address."); 
+      }
+    });
+});
