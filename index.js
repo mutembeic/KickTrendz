@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to add an item to the cart
   function addToCart(name, price) {
     cart.push({ name, price });
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save cart to local storage
+    localStorage.setItem("cart", JSON.stringify(cart));  
     renderCart();
     updateCartCount();
     alert(`${name} was successfully added to the cart!`);
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to remove an item from the cart
   function removeItemFromCart(index) {
     cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
+    localStorage.setItem("cart", JSON.stringify(cart)); 
     renderCart();
     updateCartCount();
   }
